@@ -1,1 +1,9 @@
-I created a proto-type page that playing music based on the weather.
+Hello, I'm Jun :-)
+
+* Developed a prototype as a music player according to weather(based on Web)
+   I want to make a music player when i am surfing on Internet but Korean companies don't offer their music player as free. So i made a prototype music player according to weather. ven they don't offer any weather API. So i could make a prototype but i reached at goal.
+   2.1 Parsing temperatures by location using Openweathermap API and changed to Celsius.
+      (I need to pay if use GeolocationAPI so i set a fixed location)
+   2.2 Checking the temperature and turning on music from Youtube Array.
+   
+   Languages / Technologies : Javascript, Jquery, Ajax, HTML, CSS, Openweathermap API
