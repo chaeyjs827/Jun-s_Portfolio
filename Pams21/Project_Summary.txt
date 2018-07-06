@@ -1,0 +1,11 @@
+Hi, I am Jun :-)
+
+Developed a company web site(based on MVC2 Spring)
+   The company's web site was made by C#. I've recreated it using Spring.
+   1. Analysing a structure about Model, View, Controller.
+   2. Layout about Company Introduction, Product Introduction, Delivery Performance.
+   3. Developed login function (Session Login).
+   4. Mapping out board lists and connected using Mybatis.
+   5. Made variety baord funcions.
+
+  Languages / Technologies  : Spring, JSTL, Javascript, Jquery, Ajax, HTML, CSS, Mysql, Mybatis
