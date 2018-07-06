@@ -1,0 +1,1492 @@
+﻿@charset "utf-8";
+
+@font-face {
+	font-family: ng;
+	src: url('../fonts/NanumGothic.eot');
+	/*src:local(※), url('../fonts/NanumGothic.woff') format('woff');*/
+	font-weight: normal;
+	font-style: normal;
+}
+
+/*@import url('../fonts/Daum_Regular.ttf');
+@import url('../fonts/NanumGothic.ttf');*/
+html {
+	overflow-y: scroll;
+}
+
+html, body {
+	width: 100%;
+	height: 100%;
+	/*font-family: 'NanumGothic', Arial !important;*/
+}
+
+body {
+	/*"다음_Regular",Daum,Daum_Regular, */
+	/*font-family: 'NanumGothic', "Helvetica Neue", Helvetica, Arial, sans-serif !important;*/
+	/*font-family: 'NanumGothic', Arial !important;*/
+	/*font: 12px/1.2em Dotum, Helvetica, Sans-serif !important;*/
+	color: #666 !important;
+	line-height: 1.8285 !important;
+}
+
+#wrap {
+	min-height: 100%;
+}
+
+html, body, h1, h2, h3, h4, h5, h6, ul, ol, dl, li, dt, dd, table, tr,
+	td, p, form, fieldset, input, button, textarea, select {
+	/*line-height: 120%;
+    font-size: 12px;*/
+	padding: 0;
+	font-family: ng;
+	margin: 0;
+}
+
+img {
+	border: 0
+}
+
+a {
+	display: block;
+	text-decoration: none;
+	color: #000
+}
+
+a:link, a:hover, a:visited, a:active {
+	text-decoration: none
+}
+
+button {
+	border: 0;
+	cursor: pointer
+}
+
+label { /*cursor:pointer*/
+	
+}
+
+strong {
+	font-weight: bold
+}
+
+li {
+	line-height: 25.59px; /*list-style:none;*/
+}
+
+/****************************** 메인화면 *******************************/
+/****** 즐겨찾기 메뉴 ******/
+.optionMenu {
+	overflow: hidden;
+	padding: 0 15px;
+}
+
+.optionMenu button {
+	float: right;
+	font-size: 12px;
+	padding: 0 8px;
+	background-color: #fff;
+	border: 1px solid #dedede;
+}
+/****** 네비게이션 메뉴 ******/
+#nav {
+	position: relative;
+	margin-bottom: 0;
+	padding: 5px 0;
+	border-bottom: 1px solid #a6a6a6;
+	background-image: url("/Pams21/resources/images/nav_gradient_gray.png");
+	/* background-image:url("./nav_gradient_gray.png"); */
+	background-repeat: repeat-x;
+	/* bg-image와 같이 사용하며, 이미지를 어떻게 배열할지 설정,가로로만 반복 */
+	background-position-y: bottom;
+}
+/* 퍼펙트데이타시스템(주) 로고 */
+.navbar-brand {
+	padding: 0 !important;
+	padding-left: 15px !important;
+	line-height: 45px !important;
+	font-size: 0 !important;
+	margin-right: 15px;
+}
+
+.navbar-brand img {
+	height: 33px;
+}
+/* 홈으로, 회사소개, 제품소개 ... 탑 nav */
+.nav_mainmenu {
+	font-size: 0px;
+	text-indent: -99999em;
+}
+
+.nav_mainmenu:hover {
+	color: #3397fe !important;
+}
+
+.nav_mainmenu:focus {
+	color: #337ab7 !important;
+}
+
+.nav_mainmenu span {
+	width: 52px;
+	height: 16px;
+	display: inline-block;
+	vertical-align: middle;
+	background-image: url(/Pams21/resources/images/PDShomepage_nav_text.png);
+	background-repeat: no-repeat;
+	background-position-x: 0;
+	background-position-y: 0;
+}
+
+.nav_Home span {
+	width: 41px;
+	background-position-x: -348px;
+	background-position-y: -16px;
+}
+
+.nav_Product span {
+	background-position-x: -104px;
+}
+
+.nav_Sold span {
+	background-position-x: -208px;
+}
+
+.nav_Login span {
+	width: 39px;
+	background-position-x: -110px;
+	background-position-y: -16px;
+}
+
+.nav_Logout span {
+	width: 55px;
+	background-position-y: -16px;
+}
+
+.nav_QnA span {
+	width: 80px;
+	background-position-x: -188px;
+	background-position-y: -16px;
+	display: inline-block;
+}
+
+.nav_QnA i {
+	margin-left: 8px;
+}
+
+.fixedRight {
+	position: absolute;
+	right: 10px;
+}
+/* 고객지원센터의 하단에 있는 전화번호*/
+.sub_phnum {
+	/*border:1px solid #9fa6ad; padding:10px;*/
+	background-color: #f8f8f8;
+	color: #666;
+	margin-top: 30px;
+}
+
+.sub_phnum hr {
+	border-top: 1px solid #d9d9d9;
+	margin: 10px 0;
+}
+
+.sub_phnum p {
+	font-size: 11px;
+	margin: 12px 0;
+	line-height: 11px;
+}
+/* 고객지원센터 글쓰는 스타일 */
+.qna_page ul {
+	margin-left: 28px;
+}
+
+.qna_page ul, .qna_page ol {
+	/*margin-bottom:0;*/
+	
+}
+
+.qna_page hr {
+	border-color: #ccc;
+}
+
+.qna_page blockquote {
+	border-color: #ccc;
+}
+/****** // 네비게이션 메뉴 ******/
+
+/******  Footer ******/
+footer {
+	padding: 50px 0 65px;
+	margin-top: 75px;
+}
+
+footer .list-inline {
+	margin: 0;
+	padding: 0;
+}
+
+footer .copyright {
+	font-size: 14px;
+	text-align: center;
+	margin-bottom: 0;
+}
+/******  // Footer ******/
+.top_image {
+	background-color: #808080;
+	background: no-repeat center center;
+	background-attachment: scroll;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;
+	-o-background-size: cover;
+}
+/*-- 메인화면 그림 .site-heading --*/
+.top_image .site-heading, .top_image .post-heading, .top_image .page-heading
+	{
+	padding: 100px 0 80px;
+	/*color: white;*/
+}
+/* 로그인 페이지에서는 글자를 좀 더 위로 위치 시킨다. */
+.top_image .site-heading.top_login {
+	padding: 80px 0 100px !important;
+}
+
+@media only screen and (min-width: 768px) {
+	.top_image .site-heading, .top_image .post-heading, .top_image .page-heading
+		{
+		/*padding: 150px 0;*/
+		/*padding: 139px 0;*/
+		
+	}
+}
+
+.top_image .site-heading, .top_image .page-heading {
+	text-align: center;
+}
+
+.top_image .site-heading h1, .top_image .page-heading h1 {
+	margin-top: 0;
+	font-size: 50px;
+}
+
+.top_image .site-heading .subheading, .top_image .page-heading .subheading
+	{
+	font-size: 24px;
+	line-height: 1.1;
+	display: block;
+	font-weight: 300;
+	margin: 10px 0 0;
+}
+
+@media only screen and (min-width: 768px) {
+	.top_image .site-heading h1, .top_image .page-heading h1 {
+		font-size: 80px;
+	}
+}
+
+section.container {
+	/*margin:50px auto;*/
+	
+}
+/*-- margin top 20px; --*/
+.left-menu {
+	float: left;
+}
+
+.quick-btn {
+	overflow: hidden;
+}
+
+.quick-btn a {
+	display: inline-block;
+	margin: 4px 0;
+	/*text-decoration:none !important;
+	display:inline-block;
+	text-align:center;
+	border:1px solid #dedede;
+	*/
+}
+
+.quick-btn i {
+	width: 35px;
+	height: 35px;
+	display: inline-block;
+	vertical-align: middle;
+	padding: 5px;
+}
+
+.quick-btn h5 {
+	color: #337ab7;
+	margin: 5px 0;
+	background: url(./resources/images/icon-right-blue.png) no-repeat center
+		center;
+}
+
+.quick-btn span {
+	color: #fff;
+	line-height: 45px;
+}
+
+.quick-btn p {
+	color: #8d8d8d;
+	margin: 0;
+	margin-left: 5px;
+	display: inline;
+	font-size: 11px;
+}
+
+.quick-btn br {
+	line-height: 14px;
+}
+
+.quick-btn-text {
+	vertical-align: middle;
+	padding: 0;
+}
+/****** 고객지원 *******/
+.icon-callcenter {
+	background: url("./resources/images/icon_callcenter_white_small.png")
+		no-repeat center center;
+}
+
+.btn_callcenter {
+	background-color: #229cfa;
+}
+
+.btn_callcenter:hover {
+	color: #fff;
+	background-color: #0c84e1;
+	text-decoration: none;
+}
+
+.btn_callcenter:active, .btn_callcenter:focus {
+	color: #fff;
+	background-color: #1377c5;
+	text-decoration: none;
+}
+/****** // 고객지원 *******/
+/****** 묻고 답하기 *******/
+.icon-qna {
+	background: url("./resources/images/icon_qna_white_small.png") no-repeat
+		center center;
+}
+
+.btn_qna {
+	background-color: #3ebbbd;
+}
+
+.btn_qna:hover {
+	color: #fff;
+	background-color: #2faaac;
+	text-decoration: none;
+}
+
+.btn_qna:active, .btn_qna:focus {
+	color: #fff;
+	background-color: #249d9f;
+	text-decoration: none;
+}
+/****** // 묻고 답하기 *******/
+.icon-user {
+	background: url("./resources/images/glyphicons-4-user.png") no-repeat
+		center center;
+}
+
+.left-image {
+	display: inline-block;
+}
+
+.right-text {
+	vertical-align: middle;
+	display: inline-block;
+	line-height: 18px;
+	margin-left: 10px;
+}
+
+.right-text span {
+	font-family: ng;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+.right-text p {
+	display: inline;
+}
+
+.call_number {
+	overflow: hidden;
+	margin-left: 20px;
+}
+
+.call_number ul li {
+	float: left;
+	line-height: 18px;
+	padding: 0;
+}
+
+.call_number ul li span {
+	font-weight: bold;
+}
+
+.call_number ul li p {
+	color: #3397fe;
+	font-size: 18px;
+	font-family: sans-serif;
+}
+
+.call_number .col-md-6 {
+	padding: 0;
+}
+
+/****** 은행 계좌 ******/
+.bank {
+	/*margin:20px 0;*/
+	margin-top: 10px;
+}
+
+.bank p {
+	display: inline;
+	font-weight: bold;
+	vertical-align: middle;
+}
+
+.bank h4 {
+	margin-left: 14px;
+	font-family: Helvetica !important;
+	display: inline;
+	color: #8e8f8e;
+	vertical-align: middle;
+}
+
+.bank span {
+	font-weight: bold;
+}
+
+.bank div {
+	text-align: left;
+}
+/****** //은행 계좌 ******/
+
+/****** PDS 소식, 공지사항 ******/
+#home_listdata h4 {
+	color: #3397fe;
+}
+
+.moreInfo {
+	color: #fff;
+	background-color: #229cfa;
+	font-size: 12px;
+	border: 1px solid #dedede;
+	padding: 4px 10px;
+}
+
+.moreInfo:hover {
+	color: #fff;
+	background-color: #0c84e1;
+	text-decoration: none;
+}
+
+.moreInfo:active, .moreInfo:focus {
+	color: #fff;
+	background-color: #1377c5;
+	text-decoration: none;
+}
+/****** // PDS 소식, 공지사항 ******/
+
+/****** PDS 개발제품 ******/
+#home_product {
+	overflow: hidden;
+}
+
+#home_product h4 {
+	color: #3397fe;
+}
+
+#home_product img {
+	height: 30px;
+}
+/****** // PDS 개발제품 ******/
+.tag ul {
+	overflow: hidden;
+}
+
+.tag ul li {
+	float: left;
+}
+
+.tag ul li a {
+	margin: 10px;
+}
+
+#gradient_white {
+	background-image: url("/Pams21/resources/images/img_gradient_white.png");
+	background-repeat: repeat-x;
+}
+
+#gradient_shadow {
+	background-image: url("./resources/images/nav_shadow.png");
+	background-repeat: repeat-x;
+	z-index: 9999;
+}
+
+/****************************** // 메인화면 *******************************/
+.delivery {
+	margin: 4px 0;
+	padding: 8px 5px;
+	/*border:1px solid #dedede;*/
+}
+
+.delivery h5 {
+	margin-top: 8px;
+}
+
+/****************************** 회사소개 *******************************/
+.partner_list {
+	overflow: hidden;
+}
+
+.partner_list>div .nopadding {
+	height: 100%;
+	padding-right: 25px !important;
+	/*border-bottom:1px solid #dedede;*/
+}
+
+.partner_list>div .nopadding a {
+	display: inline;
+}
+
+.partner_list .tab-content .tab-pane {
+	overflow: hidden;
+}
+
+.partner_list .tab-content .tab-pane>div {
+	height: 200px;
+	white-space: nowrap;
+}
+
+.partner_list .tab-content .tab-pane>div>div {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.helper {
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+}
+
+.partner_list .tab-content .tab-pane img {
+	vertical-align: middle;
+}
+
+.customer_list {
+	/*overflow:hidden;*/
+	
+}
+
+.customer_list.customer_list ul {
+	padding: 5px 20px 5px 10px !important;
+}
+
+.customer_list>div {
+	overflow: hidden;
+	/*height:300px;*/
+	margin-bottom: 20px;
+}
+
+.customer_list>div .nopadding {
+	height: 100%;
+	/*padding-right:25px !important;
+	border-bottom:1px solid #dedede;*/
+}
+
+.customer_list>div .nopadding a {
+	display: inline;
+}
+/* 뒤에 회색 배경, 회색 anchor 태그 있을 경우*/
+.sub_anchor_list {
+	background-color: #f5f5f5;
+}
+
+.sub_anchor_list ul {
+	overflow: hidden;
+}
+
+.sub_anchor_list ul li {
+	float: left;
+	list-style: none;
+}
+
+.sub_anchor_list a {
+	color: #9d9d9d;
+	margin: 3px 10px;
+}
+
+.site-content {
+	padding-top: 70px;
+}
+
+.post-preview>a {
+	color: #404040;
+}
+
+.post-preview>a:hover, .post-preview>a:focus {
+	text-decoration: none;
+	color: #0085a1;
+}
+
+.post-preview>a>.post-title {
+	font-size: 30px;
+	margin-top: 30px;
+	margin-bottom: 10px;
+}
+
+.post-preview>a>.post-subtitle {
+	margin: 0;
+	font-weight: 300;
+	margin-bottom: 10px;
+}
+
+.post-preview>.post-meta {
+	color: #808080;
+	font-size: 18px;
+	font-style: italic;
+	margin-top: 0;
+}
+
+.post-preview>.post-meta>a {
+	text-decoration: none;
+	color: #404040;
+}
+
+.post-preview>.post-meta>a:hover, .post-preview>.post-meta>a:focus {
+	color: #0085a1;
+	text-decoration: underline;
+}
+
+@media only screen and (min-width: 768px) {
+	.post-preview>a>.post-title {
+		font-size: 36px;
+	}
+}
+
+h1, h2, h3, h4, h5, h6 {
+	/*font-family:  "다음_Regular",Daum,Daum_Regular, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;*/
+	font-weight: 800;
+}
+
+#normal_table2 td {
+	padding: 10px 0;
+}
+
+.graycolor {
+	color: #333333;
+}
+
+/*********** 그리드 alt row background color 바꿀 때 ************/
+#jqxgrid .jqx-grid-cell {
+	border-left: none;
+	border-right: none;
+	border-top: 1px solid #ff6a00;
+}
+
+.jqx-widget-content-arctic2 {
+	color: #222222;
+	text-shadow: none;
+	border-color: #FFFFFF;
+	background: #ffffff;
+	font-family: Verdana;
+}
+
+.jqx-grid-column-menubutton-arctic2, .jqx-widget-arctic2.jqx-grid-column-menubutton-arctic2
+	{
+	border-color: #FFFFFF;
+}
+
+.jqx-grid-cell-arctic2, .jqx-widget-arctic2 .jqx-grid-cell-arctic2 {
+	/*background-color: #ffffff;
+  color: #222222;
+  text-shadow: none;*/
+	
+}
+
+/******* 그리드 컬럼 헤더 디자인 *************/
+.jqx-widget-header, .jqx-widget-header-arctic2 {
+	background-color: #FFFFFF !important;
+}
+
+.jqx-grid-header {
+	height: 50px !important;
+}
+
+.jqx-grid-column-header {
+	border-color: #FFFFFF !important;
+}
+
+.jqx-grid-column-header span {
+	font-weight: 900;
+}
+
+.jqx-grid-column-header>div>div {
+	margin-bottom: 0 !important;
+	margin-top: 0 !important;
+	padding-bottom: 0 !important;
+}
+
+.jqx-grid-column-header>div>div span {
+	line-height: 50px;
+}
+
+/******* 그리드 컬럼 디자인 *************/
+.jqx-grid {
+	border: none !important;
+	border-bottom: 1px solid #dedede !important;
+}
+
+/************/
+.author {
+	padding: 0 10px;
+	display: inline-block;
+	color: #b0b0b0;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+		sans-serif;
+}
+
+.comment-date {
+	padding: 0 10px;
+	display: inline-block;
+	color: #b0b0b0;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+		sans-serif;
+}
+
+.vertical-divider {
+	border-left: 1px solid #dedede;
+}
+/*.jqx-widget-content jqx-input{
+	border:none !important;
+}*/
+.jqx-widget .jqx-grid-cell, .jqx-widget .jqx-grid-column-header,
+	.jqx-widget .jqx-grid-group-cell {
+	
+}
+
+#jqxgrid_News .jqx-grid-cell, #jqxgrid_Notice .jqx-grid-cell {
+	border: 1px solid #dedede;
+	border-left: none;
+}
+
+/********* scroll 그라데이션 막기 ******/
+.carousel-control {
+	color: #3397fe !important;
+	text-shadow: none !important;
+}
+
+.left.carousel-control {
+	background-image: none !important;
+}
+
+.right.carousel-control {
+	background-image: none !important;
+}
+
+.overflow-x {
+	white-space: nowrap;
+	margin: 20px 0;
+	padding: 0;
+}
+
+.overflow-x li {
+	display: inline-block;
+	margin-left: 10px;
+}
+
+.overflow-x li:first-child {
+	margin-left: 0;
+}
+
+.bs-sidebar .nav>.active>ul {
+	display: block;
+	margin-bottom: 8px;
+}
+
+@media ( min-width : 768px) {
+	.sidebar-nav .navbar .navbar-collapse {
+		padding: 0;
+		max-height: none;
+	}
+	.sidebar-nav .navbar ul {
+		float: none;
+	}
+	.sidebar-nav .navbar ul:not {
+		display: block;
+	}
+	.sidebar-nav .navbar li {
+		float: none;
+		display: block;
+	}
+	.sidebar-nav .navbar li a {
+		padding-top: 12px;
+		padding-bottom: 12px;
+	}
+}
+
+.navbar-collapse a {
+	padding: 15px;
+}
+
+/* 업무흐름도에 있는 img 파일들 위로 정렬해주기 (height가 다르기 때문) */
+.s2_flow img {
+	vertical-align: top;
+}
+
+/* S2 지원기능 테이블 디자인 */
+.s2_function_table thead>tr>th {
+	border-bottom: 2px solid #ff6a00 !important;
+}
+
+.s2_function_table th {
+	font-size: 12px;
+	padding: 8px 0 !important;
+}
+
+.s2_function_table td {
+	font-size: 12px;
+}
+
+/* QnA 에 있는 테이블들 디자인 */
+/*.table_QnA th{
+	font-size:12px;
+	padding:8px 0 !important;
+}
+.table_QnA td{
+	font-size:12px;
+}*/
+/* S2 모바일장비 테이블 디자인*/
+.s2_mobile_table {
+	text-align: center;
+}
+
+.s2_mobile_table td {
+	vertical-align: middle !important;
+}
+
+.s2_mobile_table td img {
+	height: 70px;
+}
+
+.tr_gubun {
+	border-top: 2px solid #b0b0b0;
+}
+
+/* 더보기 있는 테이블. 요약한 상황.*/
+.table_ellipsis {
+	table-layout: fixed;
+}
+
+.table_ellipsis td {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.text-overflow {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.anchor-overflow {
+	/*display:inline-block;
+	text-overflow:ellipsis;
+	overflow:hidden;
+	white-space:nowrap;*/
+	
+}
+
+#btnSearch:hover {
+	cursor: pointer;
+}
+/* PDS 개발제품 */
+/*.product_list a{
+	padding:0;
+}
+.product_list li{
+	display:inline-block;
+}
+.product_list a img{
+	height:35px;
+}
+.product_list a:first-child img{
+	margin-top:0;
+}*/
+/* 좌측 nav 메뉴 */
+.sidebar_nav {
+	/*padding-right:40px;*/
+	padding-bottom: 30px;
+}
+
+.sidebar_nav ul a {
+	color: #404040;
+	/*
+	display:inline-block;
+	padding:6px 10px 6px 0;*/
+}
+
+.sidebar_nav ul a:active, .sidebar_nav ul a:hover {
+	color: #3397fe;
+	text-decoration: none;
+}
+
+.sidebar_nav ul li.active a {
+	color: #3397fe;
+}
+/*.sidebar_nav > .nav > li {
+	border-bottom:1px solid #dedede;
+}*/
+.sidebar_nav>.nav>li>a {
+	padding: 5px 15px;
+}
+
+.sub_sidebar li a {
+	padding-left: 30px;
+}
+
+.sub_sidebar li:hover {
+	background-color: #eee;
+}
+
+.sub_sidebar li.active {
+	background-color: #f2f2f2;
+}
+
+table tr td {
+	color: #666;
+}
+
+/* col-md ... 이런거 할 때 padding 값 없애주는 클래스 */
+.nopadding {
+	padding: 0 !important;
+}
+
+/* 동그라미 치는 리스트일 경우 */
+.list_style h3 {
+	/*margin-bottom:40px;*/
+	
+}
+
+.list_style ul li {
+	list-style-image: url(./resources/images/list_dot.png);
+	margin-left: 12px;
+}
+
+.list_style>div {
+	overflow: hidden;
+}
+
+.list_style ul {
+	
+}
+
+.screen img {
+	margin: 20px 0;
+}
+
+.screen h3 {
+	font-size: 20px;
+}
+
+.top_subnav {
+	margin-top: 20px;
+}
+
+.top_subnav>div {
+	text-align: right;
+}
+
+.top_subnav li {
+	margin: 0 5px;
+}
+
+.top_subnav li a {
+	color: #ccc;
+}
+
+.top_subnav li.active a {
+	border-bottom: 1px solid #449d44;
+	color: #449d44;
+}
+
+.top_subnav li a:hover {
+	text-decoration: none;
+	color: #449d44;
+}
+/* 퍼펙트표 버튼 스타일*/
+.mybtn {
+	background-color: #9fa6ad;
+	line-height: 1.3;
+	padding: 4px 10px 5px;
+	color: #fff;
+}
+
+.mybtn:hover {
+	background-color: #3397fe;
+	color: #fff;
+	text-decoration: none;
+}
+/* #selector ul .active .mybtn{
+	background-color:#3397fe;
+	color:#fff;
+	text-decoration:none;
+}  */
+#selector ul li.active .mybtn {
+	background-color: #3397fe;
+	color: #fff;
+	text-decoration: none;
+}
+
+/* 버튼 그룹묶는 div */
+#selector ul li {
+	display: inline-block;
+	margin-top: 5px;
+}
+/* 글쓰기 폼. */
+.write_form .header h2 {
+	margin-top: 10px;
+}
+
+.write_form blockquote {
+	overflow: hidden;
+	margin: 29px 15px;
+	padding-left: 15px;
+	line-height: 1.6;
+}
+
+.write_form a {
+	display: inline-block;
+}
+
+.write_form p {
+	line-height: 1.6 !important;
+	/*font-size:17px !important;
+      margin-bottom:auto !important;*/
+}
+
+.write_form li {
+	/*font-size:17px !important;*/
+	line-height: 1.6 !important;
+	margin-bottom: auto !important;
+}
+
+.write_form ol li {
+	margin-left: 30px;
+}
+
+.write_form hr {
+	/*margin-bottom:0 !important;*/
+	
+}
+
+.write_form img {
+	/*width:auto;*/
+	height: auto !important;
+	max-height: 100%;
+}
+
+.write_form .content_group {
+	margin-top: 0;
+}
+/* 글 세부목록의 목록, 수정, 삭제 버튼들*/
+.ctrlBtn_group a {
+	margin: 0 2px;
+}
+/* 특허 스타일 */
+/*.patent ul li {
+	display:inline;
+}*/
+/* 특허 안의 이미지 등 스타일..*/
+.certification ul li {
+	display: inline-block;
+	min-height: 345px;
+	/*width:185px;*/
+	text-align: center;
+}
+
+.certification ul li img {
+	border: 1px solid #dedede;
+	width: 100%;
+}
+
+.certification ul li span {
+	display: block;
+}
+
+.fileWrap {
+	width: 250px;
+}
+
+.prod_gubun {
+	color: #5cb85c;
+	font-weight: bold;
+}
+
+/* #selector ul li.banana .mybtn{
+	background-color:#3397fe;
+	color:#fff;
+	text-decoration:none;
+} */
+
+/****************************** 공통 *******************************/
+.m-t-10 {
+	margin-top: 10px;
+}
+
+.m-t-20 {
+	margin-top: 20px;
+}
+
+.m-b-20 {
+	margin-bottom: 20px;
+}
+
+.m-t-40 {
+	margin-top: 40px;
+}
+
+.m-a-10 {
+	margin: 10px;
+}
+
+.m-a-20 {
+	margin: 20px;
+}
+
+.m-r-5 {
+	margin-right: 10px;
+}
+
+.p-a-10 {
+	padding: 10px;
+}
+
+.p-t-10 {
+	padding-top: 10px;
+}
+
+.p-t-20 {
+	padding-top: 20px;
+}
+
+.p-b-20 {
+	padding-bottom: 20px;
+}
+
+.p-b-40 {
+	padding-bottom: 40px;
+}
+
+.m-tb-10 {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+/* h4 의 margin 크기 확정 */
+.col-md-9 h4 {
+	margin-top: 25px;
+	margin-bottom: 0px;
+}
+
+.col-md-9 hr {
+	margin-bottom: 40px;
+}
+/* 색깔 강조 */
+.highlight {
+	color: #62aaf3;
+}
+/* table 이든 div 이든. 큰 그룹안에 있는 작은 그룹들. */
+.content_group {
+	overflow: hidden;
+	margin-top: 40px;
+}
+/* inline 이 필요한 항목의 a*/
+.content_list a {
+	display: inline;
+}
+/* 화면 상단에 작은 nav list */
+.top_subnav ul {
+	text-align: right;
+}
+
+.top_subnav ul li {
+	display: inline-block;
+}
+
+.table {
+	border-bottom: 1px solid #dddddd;
+}
+
+.table a {
+	color: #666;
+	display: inline; /*ellipsis 형식일 경우, a 가 있으면 적용이 안된다. inline 필요함.*/
+}
+
+table td {
+	table-layout: fixed;
+}
+
+/* 버튼 active 되었을 때 */
+.btn_active {
+	color: #fff;
+	background-color: #0275d8;
+	border-color: #0275d8;
+}
+/* 글쓰기 버튼 */
+.btn_write {
+	overflow: hidden;
+}
+
+.btn_write a {
+	float: right;
+}
+
+.btn_write p {
+	float: right;
+	color: #5f9ea0;
+}
+/* 첨부파일 */
+.icon_file {
+	margin-left: 4px;
+	/*vertical-align:-1px;*/
+
+	/*display:inline-block;
+	width:16px;
+	height:16px;
+	text-indent:-999999px;
+	text-transform: capitalize;
+	font-size:0;*/
+}
+/* width */
+.width_No {
+	width: 46px;
+}
+
+.width_fulldate {
+	width: 200px;
+}
+
+.width_PatentNo {
+	width: 140px;
+}
+
+.width_Year {
+	width: 100px;
+}
+
+.width_SCnt {
+	width: 62px;
+}
+
+.width_Writer {
+	width: 90px;
+}
+
+.width_File {
+	width: 30px;
+}
+
+.width_Company {
+	width: 110px;
+}
+
+.width_ProdName {
+	width: 100px;
+}
+
+.width_Name {
+	width: 200px;
+}
+
+/* text-align: center*/
+.text_C {
+	text-align: center;
+}
+
+.text_R {
+	text-align: right;
+}
+
+.text_L {
+	text-align: left;
+}
+
+/******* display none before page load ********/
+.display_none {
+	display: none;
+}
+
+/* 중복확인 > 확인완료 시 되는 '확인' 스타일 */
+.confirm {
+	background-color: #fff !important;
+	background: url(./resources/images/confirm.png) no-repeat center center;
+	background-size: 25px;
+	text-indent: -999999em;
+	font-size: 0;
+}
+
+/* RegisterSuccess 에 있는 li 스타일 */
+.button_list li {
+	padding: 40px 0;
+}
+
+.button_list li span {
+	display: block;
+}
+
+.button_list ul {
+	list-style: none;
+}
+/* li inline-block 스타일 */
+.horizontal_list ul li {
+	
+}
+
+.noliststyle ul, .noliststyle ol, .noliststyle dl {
+	list-style: none !important;
+	padding: 0 !important;
+	margin: 0 !important;
+}
+
+/* iphone 에서 계좌번호가 링크로 인식됨.*/
+/*a[x-apple-data-detectors] {
+  color: inherit !important;
+  text-decoration: none !important;
+  font-size: inherit !important;
+  font-family: inherit !important;
+  font-weight: inherit !important;
+  line-height: inherit !important;
+}*/
+nav {
+	background-color: #fff !important;
+}
+
+.inlineblock {
+	display: inline-block;
+}
+
+/* write, editDetail 의 첨부파일 영역 */
+.file_list {
+	display: block;
+}
+
+.file_list a {
+	font-size: 14px;
+}
+
+.file_list>label {
+	position: absolute;
+	left: 0;
+}
+
+.file_list .item {
+	width: auto;
+	margin-left: 86px;
+	margin-bottom: 10px;
+}
+
+.file_list li {
+	list-style: none;
+}
+
+.file_list span {
+	position: absolute;
+	right: 8px;
+	top: 8px;
+	font-size: 12px;
+}
+
+.file_list span img {
+	vertical-align: middle;
+	cursor: pointer;
+}
+
+.file_list .file_list_text {
+	margin-left: 15px;
+	padding: 6px;
+}
+/* 드롭다운 화살표 이상한 스타일 나오는 문제 */
+select::-ms-expand {
+	width: 12px;
+	border: none;
+	background: #fff;
+}
+
+.img_maxWidth {
+	max-width: 100%;
+	/*max-height:100%;*/
+}
+
+/*********************** 오늘하루 이 창 띄우지 않음 ********************/
+.checkbox_toggle {
+	width: 100%;
+	display: inline-block;
+	background-color: #272727;
+	color: #b0b0b0;
+	padding: 8px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+
+.checkbox_toggle div {
+	display: inline-block;
+	margin-left: 10px;
+}
+/***** 닫기 버튼 */
+.btn_close {
+	display: inline-block;
+	float: right;
+	background-color: transparent;
+	color: #3397fe;
+	padding: 0 5px;
+	border: none;
+}
+
+#popUp {
+	width: 300px;
+	margin-left:1200px;
+	margin-top:150px;
+	height: 370px;
+	background: #3d3d3d;
+	color: #fff;
+	position: absolute;
+	top: 10px;
+	left: 100px;
+	text-align: center;
+	border: 2px solid #000;
+}
+
+/****************************** // 공통 *******************************/
+
+/* css 미디어 쿼리 사용. 해상도 측정 */
+/* @media all and (max-width: 320px) {*/
+@media all and (max-width: 500px) {
+	#table_qna td {
+		display: none;
+	}
+	#table_qna td.qna_title {
+		display: block;
+	}
+	#table_qna th {
+		display: none;
+	}
+	#table_qna th.qna_title {
+		display: block;
+	}
+}
+
+@media all and (min-width: 501px) and (max-width: 768px) {
+}
+
+@media all and (min-width: 769px) and (max-width: 1024px) {
+}
+
+@media all and (min-width: 1025px) {
+}

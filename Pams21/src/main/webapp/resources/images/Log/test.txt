@@ -1,0 +1,16 @@
+2016-07-08 16:42:44	[InputSession]		Set Session Time
+2016-07-08 16:42:44	[Login]		System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: PDS_homepage.Controllers.UserController.Login(UserAccount user)
+2016-07-08 16:44:38	[InputSession]		Set Session Time
+2016-07-08 16:44:38	[Login]		System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: PDS_homepage.Controllers.UserController.Login(UserAccount user)
+2016-07-08 16:48:17	[Login]		System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: PDS_homepage.Controllers.UserController.Login(UserAccount user)
+2016-07-08 16:57:34	[Login]		System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: PDS_homepage.Controllers.UserController.Login(UserAccount user)
+2016-07-08 17:08:35	[set Session]		naanace
+2016-07-08 17:08:35	[set Session2]		naanace
+2016-07-08 17:08:35	[InputSession]		채수정
+2016-07-08 17:28:48	[set Session]		naanace
+2016-07-08 17:28:48	[set Session2]		naanace
+2016-07-08 17:28:48	[InputSession]		채수정

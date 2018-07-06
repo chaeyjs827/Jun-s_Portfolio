@@ -1,0 +1,71 @@
+@charset "UTF-8";
+
+html, body, #main {
+	height: 100%;
+}
+
+#top {
+	width: 100%;
+	height: 5%;
+	overflow: auto; /* 범위 내 내용이 초과되면 자동으로 스크롤 생김 */
+	position: top;
+}
+
+#mainPage {
+	width: 100%;
+	height: 95%;
+	position: bottom;
+}
+
+#buttonSec {
+	float: left;
+}
+
+#youtubeSec {
+	float: left;
+}
+
+.buttonFeature {
+	background: #1AAB8A;
+	color: #fff;
+	border: none;
+	position: relative;
+	height: 50px;
+	font-size: 1.6em;
+	padding: 0 2em;
+	cursor: pointer;
+	transition: 800ms ease all;
+	outline: none;
+}
+
+.buttonFeature:hover {
+	background: #fff;
+	color: #1AAB8A;
+}
+
+.buttonFeature:before, button:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 2px;
+	width: 0;
+	background: #1AAB8A;
+	transition: 400ms ease all;
+}
+
+.buttonFeature:after {
+	right: inherit;
+	top: inherit;
+	left: 0;
+	bottom: 0;
+}
+
+.buttonFeature:hover:before, button:hover:after {
+	width: 100%;
+	transition: 800ms ease all;
+}
+
+#musicButton {
+	margin: 0px;
+}

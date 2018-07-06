@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="my.mappers.boardMapper">
+	<select id="boardList" resultType="vo.BoardVO">
+
+	</select>
+
+	<select id="totalCount" resultType="integer">
+		select count(*) from
+		mvc2_oftenQue
+	</select>
+	
+	<select id="totalCountSearch" parameterType="String" resultType="integer">
+		<![CDATA[
+		select count(*) from
+		mvc2_oftenQue WHERE postTitle LIKE CONCAT('%',#{value},'%')]]>
+	</select>
+	
+	<select id="totalCountNotice" resultType="integer">
+		select count(*) from
+		mvc2_noticeBoard
+	</select>
+
+	<select id="totalCountNoticeSearch" parameterType="String" resultType="integer">
+		select count(*) from
+		mvc2_noticeBoard WHERE postTitle LIKE CONCAT('%',#{value},'%') 
+	</select>
+
+	<select id="getPageListSearch" parameterType="String"
+		resultType="integer">
+		select count(*) from mvc2_oftenQue WHERE title =
+		#{searchWord}
+	</select>
+
+	<select id="typeTotalCount" resultType="integer">
+		select count(*) from
+		mvc2_oftenQue WHERE postType = #{listType}
+	</select>
+
+	<select id="getPageList" resultType="vo.BoardVO">
+		SELECT postIndex ,postTitle ,postType, postWriter,postRegiDate,
+		postFile, postContent,postHits FROM mvc2_oftenQue ORDER BY
+		postRegiDate DESC LIMIT #{fno}, 10
+		<!-- limit n,m 은 n번쨰 인덱스부터 m개를 출력 해주는놈! -->
+	</select>
+	
+	<select id="searchPaging" resultType="vo.BoardVO">
+		SELECT postIndex ,postTitle ,postType, postWriter,postRegiDate,
+		postFile, postContent,postHits FROM mvc2_oftenQue WHERE postTitle LIKE CONCAT('%',#{searchWord},'%') ORDER BY
+		postRegiDate DESC LIMIT #{fno}, 10
+		<!-- limit n,m 은 n번쨰 인덱스부터 m개를 출력 해주는놈! -->
+	</select>
+	
+<!-- 	<select id="getPageList" resultType="vo.BoardVO">
+		SELECT postIndex ,postTitle ,postType, postWriter,postRegiDate,
+		postFile, postContent,postHits FROM mvc2_oftenQue ORDER BY
+		postRegiDate DESC LIMIT #{fno}, 10
+		limit n,m 은 n번쨰 인덱스부터 m개를 출력 해주는놈!
+	</select> -->
+	
+	<select id="getNoticePageList" resultType="vo.BoardVO">
+		SELECT postIndex ,postTitle, postWriter,postRegiDate,
+		postFile, postContent,postHits FROM mvc2_noticeBoard ORDER BY
+		postRegiDate DESC LIMIT #{fno}, 10
+		<!-- limit n,m 은 n번쨰 인덱스부터 m개를 출력 해주는놈! -->
+	</select>
+	
+	<select id="getNoticePageListSearch" resultType="vo.BoardVO">
+		SELECT postIndex ,postTitle, postWriter,postRegiDate,
+		postFile, postContent,postHits FROM mvc2_noticeBoard WHERE postTitle LIKE CONCAT('%',#{searchWord},'%') ORDER BY
+		postRegiDate DESC LIMIT #{fno}, 10
+		<!-- limit n,m 은 n번쨰 인덱스부터 m개를 출력 해주는놈! -->
+	</select>
+
+	<select id="getTypePageList" resultType="vo.BoardVO">
+		SELECT postIndex ,postTitle ,postType, postWriter,postRegiDate,
+		postFile, postContent,postHits FROM mvc2_oftenQue WHERE
+		postType=#{listType} ORDER BY postRegiDate DESC LIMIT #{fno}, 10
+		<!-- limit n,m 은 n번쨰 인덱스부터 m개를 출력 해주는놈! -->
+	</select>
+	
+	<select id="bRead" resultType="vo.BoardVO">
+		SELECT postTitle, postWriter, postRegiDate, postContent FROM mvc2_oftenQue WHERE postIndex = #{postIndex}
+	</select>
+	
+ 	<select id="bReadNotice" resultType="vo.BoardVO">
+		SELECT postTitle, postWriter, postRegiDate, postContent FROM mvc2_noticeBoard WHERE postIndex = #{postIndex}
+	</select>
+
+	<insert id="bInsert">
+		INSERT INTO mvc2_oftenQue (postIndex, postTitle,
+		postType, postWriter, postRegiDate, postFile, postContent, postHits)
+		VALUES(default, #{postTitle}, #{postType}, '10테스터', now(), 'x', #{postContent}, 0)
+	</insert>
+</mapper>

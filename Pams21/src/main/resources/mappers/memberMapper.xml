@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="my.mappers.memberMapper">
+	<!-- 자바클래스에서 mapper 을 찾는 경로 다른 mapper와 중복되지 않도록 네임 스페이스 기재 -->
+
+	<select id="memberList" resultType="vo.MemberVO">
+		SELECT * FROM mvc2_Member
+	</select>
+
+
+	<select id="noticeBMain"  resultType="vo.BoardVO">
+		SELECT postTitle, postIndex FROM mvc2_noticeBoard ORDER BY postRegiDate DESC LIMIT 5
+	</select>
+	
+	<select id="oftenBMain" resultType="vo.BoardVO">
+		SELECT postTitle, postIndex FROM mvc2_oftenQue ORDER BY postRegiDate DESC LIMIT 5
+	</select>
+	
+	
+</mapper>

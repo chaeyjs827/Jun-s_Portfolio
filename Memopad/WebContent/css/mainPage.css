@@ -1,0 +1,126 @@
+@charset "UTF-8";
+
+#screen {
+	width: 900px;
+	height: 600px;
+	border-style: solid;
+}
+
+.memoPad {
+	width: 250px;
+	height: 215px;
+	border: 1px solid black;
+	position : absolute;
+}
+
+#topBar {
+	width: 100%h;
+	height: 30px;
+	border-bottom: 1px solid black;
+	background-color: #a6a6a6;
+}
+
+#textArea {
+	width: 100%;
+	height: 183px;
+	background-color: #e6e6e6;
+	font-size: 12px;
+	overflow: auto;
+	position:absolute;
+	/* resize: both; */
+	/* border-top: 1px solid green; */
+}
+
+#closeBtn {
+	height: 15px;
+	float: right;
+}
+
+.resizingCursor {
+	width : 17px;
+	height : 17px;
+	background-color : #cccccc;
+	position:absolute;
+	right:0px;
+	bottom:0px;
+}
+
+#addBtn{
+	background-image : url("../img/add.png");
+}
+
+#deleteBtn{
+	background-image : url("../img/delete.png");
+}
+
+#contextMenuBtn {
+	background-image : url("../img/contextMenu.png");
+}
+
+
+.leftBtns{
+	width:30px;
+	height:30px;
+	float:left;
+}
+
+.rightBtns {
+	width:30px;
+	height:30px;
+	float:right;
+}
+
+.leftBtns:hover, .rightBtns:hover{
+	background-color : 	#d9d9d9;
+}
+
+.rClick_ContextMenu {
+	position : absolute;
+	display : none;
+	border : 1px solid black;
+	background-color : #cccccc;
+	padding : 7px;
+	z-index : 100;
+}
+
+.rClick_ContextMenu.active {
+	display : block;
+    border-color:#9999ff;
+}
+
+.deleteBtnCM {
+    background-color: #a6a6a6; /* Green */
+    border: none;
+    color: black;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight:bold;
+    cursor: pointer;
+}
+
+.deleteBtnCM:hover {
+	background-color : #f2f2f2;
+}
+
+.tester {
+	background-color : black;
+	height : 60px;
+}
+
+::-webkit-scrollbar {
+    width: 1em;
+    height : 10px;
+    padding : 5px;
+}
+::-webkit-scrollbar-button {
+    background: #a6a6a6
+}
+::-webkit-scrollbar-track-piece {
+    background: #eee
+}
+::-webkit-scrollbar-thumb {
+    background: #a6a6a6
+}​
