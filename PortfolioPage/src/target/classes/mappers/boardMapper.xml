@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="my.mappers.testMapper">
+	<select id="selectTest" resultType="integer">
+		SELECT age FROM testdb
+	</select>
+
+	<select id="indexList" resultType="vo.BoardVO">
+		SELECT *
+		FROM pfboard
+		WHERE
+		regiDate
+		LIMIT 6
+	</select>
+
+	<insert id="boardInsert">
+		INSERT INTO pfboard VALUES (
+		default, now(), #{title},
+		#{startedDate}, #{finishedDate}, #{summary},
+		#{content}, #{gitUrl},
+		#{serverUrl}, #{projectType}, #{memberCheck},
+		#{thumnail}
+		)
+	</insert>
+
+	<select id="totalCount" parameterType="integer" resultType="integer">
+		<if test='value == 0'>
+			SELECT COUNT(*) FROM pfboard
+		</if>
+		<if test='value == 1'>
+			SELECT COUNT(*) FROM pfboard WHERE careercheck = '1'
+		</if>
+		<if test='value == 2'>
+			SELECT COUNT(*) FROM pfboard WHERE careercheck = '2'
+		</if>
+		<if test='value == 3'>
+			SELECT COUNT(*) FROM pfboard WHERE projectType = '1'
+		</if>
+		<if test='value == 4'>
+			SELECT COUNT(*) FROM pfboard WHERE projectType = '2'
+		</if>
+	</select>
+</mapper>
+

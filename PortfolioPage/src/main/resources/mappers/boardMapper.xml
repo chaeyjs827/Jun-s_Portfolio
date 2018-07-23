@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="my.mappers.testMapper">
+	<select id="selectTest" resultType="integer">
+		SELECT age FROM testdb
+	</select>
+
+	<select id="indexList" resultType="vo.BoardVO">
+		SELECT * FROM pfboard ORDER BY
+		finishedDate DESC LIMIT 6
+	</select>
+
+	<insert id="boardInsert">
+		INSERT INTO pfboard VALUES (
+		default, now(), #{title},
+		#{writer}, #{usingSkill},
+		#{startedDate}, #{finishedDate}, #{summary},
+		#{content}, #{gitUrl},
+		#{serverUrl}, #{projectType}, #{careerCheck},
+		#{thumnail}
+		)
+	</insert>
+
+	<select id="totalCount" parameterType="integer" resultType="integer">
+		<if test='value == 0'>
+			SELECT COUNT(*) FROM pfboard
+		</if>
+		<if test='value == 1'>
+			SELECT COUNT(*) FROM pfboard WHERE careercheck = '1'
+		</if>
+		<if test='value == 2'>
+			SELECT COUNT(*) FROM pfboard WHERE careercheck = '2'
+		</if>
+		<if test='value == 3'>
+			SELECT COUNT(*) FROM pfboard WHERE projectType = '1'
+		</if>
+		<if test='value == 4'>
+			SELECT COUNT(*) FROM pfboard WHERE projectType = '2'
+		</if>
+	</select>
+
+	<select id="pagingList" parameterType="hashmap" resultType="vo.BoardVO">
+		<if test='boardType == 0'>
+			SELECT * FROM pfboard ORDER BY finishedDate DESC LIMIT
+			#{finalNumber}, 6
+		</if>
+		<if test='boardType == 1'>
+			SELECT * FROM pfboard WHERE careercheck = '1' ORDER BY
+			finishedDate DESC LIMIT
+			#{finalNumber}, 6
+		</if>
+		<if test='boardType == 2'>
+			SELECT * FROM pfboard WHERE careercheck = '2' ORDER BY
+			finishedDate DESC LIMIT
+			#{finalNumber}, 6
+		</if>
+		<if test='boardType == 3'>
+			SELECT * FROM pfboard WHERE projectType = '1' ORDER BY
+			finishedDate DESC LIMIT
+			#{finalNumber}, 6
+		</if>
+		<if test='boardType == 4'>
+			SELECT * FROM pfboard WHERE projectType = '2' ORDER BY
+			finishedDate DESC LIMIT
+			#{finalNumber}, 6
+		</if>
+	</select>
+
+	<select id="reader" parameterType="integer" resultType="vo.BoardVO">
+		SELECT *
+		FROM pfboard WHERE postIndex = #{value}
+	</select>
+
+	<delete id="deletePost" parameterType="integer">
+		DELETE FROM pfboard WHERE
+		postIndex = #{value}
+	</delete>
+
+	<update id="updatePost" parameterType="vo.BoardVO">
+		UPDATE pfboard SET title =
+		#{title}, writer =		 
+		#{writer}, usingskill =#{usingSkill},
+		startedDate=#{startedDate},
+		finishedDate = #{finishedDate}, summary = #{summary} ,
+		content =
+		#{content}, gitUrl = #{gitUrl},
+		serverUrl=#{serverUrl},
+		projectType=#{projectType},
+		careerCheck=#{careerCheck} WHERE postIndex=#{postIndex};
+	</update>
+</mapper>
+
